@@ -1,0 +1,20 @@
+﻿/* header */
+/* content */
+@media (max-width: 1023px) {
+    .new-product-item,
+    .deal-product-item,
+    .bestSeller-product-item,
+    .popular-product-item {
+        margin-top: 1.5rem;
+    }
+
+    .new-header-seeMore {
+        top: 118%;
+    }
+
+    .bestSeller-header-seeMore {
+        top: 78%;
+    }
+
+}
+/* footer */

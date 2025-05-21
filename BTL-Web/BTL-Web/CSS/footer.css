@@ -1,0 +1,84 @@
+﻿.footer {
+    background-color: #f1f6fd;
+    position: absolute;
+    /*bottom: 0;*/
+    left: 0;
+    right: 0;
+}
+
+.footer-container {
+    padding-top: 30px;
+}
+
+.support-item-title {
+    line-height: 1.9rem;
+    font-size: 2.8rem;
+    color: #2e2f32;
+    margin-bottom: 1.4rem;
+    display: block;
+}
+
+.support-information {
+    width: 250px;
+    max-height: 38px;
+    line-height: 1.9rem;
+    overflow: hidden;
+    font-size: 1.4rem;
+    color: #46474a;
+    margin-bottom: 10px;
+}
+
+.connect-item-title {
+    line-height: 1.9rem;
+    font-size: 2.8rem;
+    color: #2e2f32;
+    margin-bottom: 1.4rem;
+    display: block;
+}
+
+.download-apps {
+    display: flex;
+}
+
+.download-img {
+    display: block;
+    width: 120px;
+    height: 120px;
+}
+
+.download-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.download-icon-item {
+    border-radius: 4px;
+}
+
+.connect-item {
+    margin-left: 36px;
+}
+
+.connect-item-mail {
+    display: flex;
+    align-items: center;
+    color: var(--main-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+    .connect-item-mail i {
+        margin-right: 1rem;
+    }
+
+.connect-item-ticket {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+    .connect-item-ticket i {
+        margin-right: 1rem;
+    }

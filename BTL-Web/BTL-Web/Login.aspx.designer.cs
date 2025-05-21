@@ -15,30 +15,12 @@ namespace BTL_Web
     {
 
         /// <summary>
-        /// allUs control.
+        /// ErrorMessageLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl allUs;
-
-        /// <summary>
-        /// login_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button login_btn;
-
-        /// <summary>
-        /// msg control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl msg;
+        protected global::System.Web.UI.WebControls.Label ErrorMessageLabel;
     }
 }

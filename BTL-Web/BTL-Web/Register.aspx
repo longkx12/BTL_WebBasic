@@ -1,61 +1,55 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="BTL_Web.Register" %>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/Register.css">
+    <title>Electric Store</title>
+    <link rel="stylesheet" href="./CSS/Register.css">
+    <link rel="stylesheet" href="./CSS/base.css">
+    <link rel="stylesheet" href="./CSS/responsive.css">
 </head>
 <body>
-    <div class="logo">
-        <a href="">
-            <img src="./image/Logo.png" alt="Logo"></a>
+    <div class="register__wrap">
+        <div class="register__logo">
+            <a href="Home.aspx">
+                <img src="./Image/Header/Geekbuying.png" alt="Geekbuying">
+            </a>
+        </div>
+        <div class="wrap">
+            <form class="register__form" id="register__form" method="post" runat="server">
+
+                <input type="text" id="account" name="account" class="register__input-account"
+                    placeholder="Email or Phone Number">
+
+                <input type="text" id="username" name="username" class="register__input-username"
+                    placeholder="Username">
+
+                <asp:Label ID="ErrorMessageLabel" runat="server" Text="" ForeColor="Red" Font-Size="16px" Style="display: flex; justify-content: center; align-items: center;"></asp:Label>
+
+
+
+                <input type="text" id="password" name="password" class="register__input-password"
+                    placeholder="Password">
+
+                <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red" Font-Size="16px" Style="display: flex; justify-content: center; align-items: center;"></asp:Label>
+
+
+                <input type="text" id="confirm-password" name="confirm-password"
+                    class="register__input-confirm-password" placeholder="Confirm passsword">
+
+                <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red" Font-Size="16px" Style="display: flex; justify-content: center; align-items: center;"></asp:Label>
+
+                <input type="submit" value="Đăng ký" class="register__input-submit">
+                <div class="seperate-space"></div>
+            </form>
+            <button class="register__button-register">
+                <a class="register__button-link" href="Login.aspx">Đăng nhập</a>
+            </button>
+        </div>
     </div>
-    <div class="register_index">
-        <form runat="server">
-            <span class="register_title">
-                <p>Đăng ký</p>
-            </span>
-
-            <span class="register_dec">
-                <p>E-mail</p>
-            </span>
-            <label for="register_email" class="register_input">
-                <input type="text" class="register_input" name="email" id="register_email" placeholder="Nhập địa chỉ E-mail" maxlength="60" autocomplete="off">
-            </label>
-
-            <span class="register_dec">
-                <p>Mật khẩu</p>
-            </span>
-            <label for="register_password" class="register_input">
-                <input type="password" name="register_input" id="register_password" placeholder="Nhập mật khẩu">
-            </label>
-
-            <span class="register_dec">
-                <p>Nhập lại mật khẩu</p>
-            </span>
-            <label for="confirm_password" class="register_input">
-                <input type="password" name="confirm_password" id="confirm_password" placeholder="Nhập lại mật khẩu">
-            </label>
-
-            <asp:Button ID="register_btn" runat="server" Text="Đăng ký" OnClick="registerUser" CssClass="register_btn" />
-
-            <div class="line_or">
-                <span>Đã có tài khoản? Đăng nhập ngay</span>
-            </div>
-            <input type="button" class="login_btn" id="login_btn" value="Đăng nhập">
-
-            <div class="register_agreement">
-                Bằng cách tiếp tục, bạn đồng ý với chúng tôi
-            <a href="#">Điều khoản sử dụng</a>
-                &
-            <a href="#">Chính sách bảo mật</a>
-            </div>
-            <span id="registerClose" class="register_close"></span>
-        </form>
-    </div>
-
+    <script src="Javascript/Register.js"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using BTL_Web.Objects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -9,30 +11,36 @@ namespace BTL_Web
 {
     public partial class Login : System.Web.UI.Page
     {
-        List<User> listUser;
+        public string CurrentUser = "";
+        public int quantity = 0;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            listUser = Application["allUser"] as List<User>;
-             allUs.InnerText= "allUs" + (listUser).Count.ToString();
-        }
-        protected void Login_Click(object sender, EventArgs e)
-        {
-            string email = Request.Form["email"];
-            string password = Request.Form["password"];
-            bool isAuthenticated = false;
-            foreach (User item in listUser)
+            List<User> listUser = Application["listUser"] as List<User>;
+            if (IsPostBack)
             {
-                if(item.Email==email && item.Password == password)
+                if (Request.HttpMethod == "GET")
                 {
-                    Session["User"] = item;
-                    Response.Redirect("Home.aspx");
-                    return;
-                    
+                    ErrorMessageLabel.Visible = false;
                 }
-            }
-            if (!isAuthenticated)
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Sai mật khẩu. Vui lòng thử lại.');", true);
+                string account = Request.Form["account"];
+                string password = Request.Form["password"];
+                var user = listUser.Find(item => item.account == account && item.password == password);
+                if (user != null)
+                {
+                    CurrentUser = user.username;
+                    Session["CurrentUser"] = user.username;
+                    Session["quantity"] = 0;
+                    Thread.Sleep(2000);
+                    Response.Redirect("Home.aspx");
+                }
+                else
+                {
+                    ErrorMessageLabel.Visible = true;
+                    ErrorMessageLabel.Text = "Sai mật khẩu hoặc tài khoản vui lòng thử lại";
+
+                }
             }
         }
     }

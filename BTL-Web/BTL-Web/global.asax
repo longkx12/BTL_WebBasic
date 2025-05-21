@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="global.asax.cs" Inherits="BTL_Web.global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="BTL_Web.Global" Language="C#" %>

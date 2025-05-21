@@ -1,0 +1,267 @@
+﻿.header-container {
+    display: flex;
+    padding: 18px 0;
+}
+
+.header__navbar-logo {
+    width: 150px;
+}
+
+.header__navbar-link {
+    text-decoration: none;
+}
+
+.header__navbar-img {
+    width: 100%;
+}
+
+
+.header__navbar {
+    background-color: var(--main-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    z-index: 5;
+    box-shadow: 0 0 3px black;
+}
+
+/* navigation */
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__navbar-navigation {
+    flex: 1;
+}
+
+.navigation__item {
+    line-height: 36px;
+    min-width: 120px;
+    text-align: center;
+}
+
+    .navigation__item:hover .navigation__item-link {
+        right: -4px;
+    }
+
+.navigation__item-link {
+    display: block;
+    height: 100%;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+    padding: 0 18px;
+    position: relative;
+    right: 0;
+    transition: right linear 0.1s;
+}
+
+/* address */
+.header__navbar-address {
+    margin-right: 1.6rem;
+}
+
+.address__link {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+}
+
+.address__link-label {
+    font-size: 1.6rem;
+    width: 35px;
+}
+
+.address__link-icon {
+    font-size: 1.2rem;
+    margin-right: 2px;
+    transform: translateY(10px);
+}
+
+/* login  */
+.header__navbar-login {
+    display: flex;
+    margin: 0 2rem;
+}
+
+.login__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.login__link-label {
+    text-align:center; 
+    word-wrap: break-word;
+    font-size: 1.6rem;
+    color: #fff;
+    width: 62px;
+}
+
+.login__link-icon {
+    transform: translateY(10px);
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* logged */
+.logged {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+/* cart */
+.header__navbar-cart {
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.cart__link {
+    cursor: pointer;
+    padding: 10px;
+    position : relative;
+    
+}
+
+.cart__link-icon {
+    display: block;
+    font-size: 1.8rem;
+}
+
+.cart__link-notice {
+    background-color: #fff;
+    position: absolute;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding: 2px 4px;
+    color: var(--main-color);
+    border-radius: 10px;
+    right: 0px;
+    top: -1px;
+    border: 2px solid var(--main-color);
+}
+
+/* policy */
+.header__policy {
+    height: 50px;
+    background-color: #f1f6fd;
+}
+
+.policy-container {
+    line-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: centers;
+}
+
+.header__policy-return {
+}
+
+.return-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+.return-label,
+.shipIn-label,
+.warranty-label {
+    display: inline-block;
+    max-height: 50px;
+}
+
+.return-header,
+.shipIn-header,
+.warranty-header {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    line-height: 1.4rem;
+    font-weight: bold;
+    display: block;
+    transform: translateY(10px);
+}
+
+.return-description,
+.shipIn-description,
+.warranty-description {
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+
+.shipIn-icon {
+    width: 36px;
+    height: 28px;
+    margin-right: 5px;
+}
+
+.warranty-icon {
+    height: 33px;
+    width: 26px;
+    margin-right: 5px;
+}
+
+/* slideShow */
+.header__slideShow {
+    max-width: 1920px;
+    overflow: hidden;
+    margin-top: 126px;
+    position: relative;
+}
+
+    .header__slideShow:hover .slideShow-btn {
+        display: block;
+    }
+
+.slideShow-listImg {
+    transition: transform linear 0.9s;
+    display: flex;
+}
+
+.slideShow-btn {
+    display: none;
+}
+
+.btn {
+    color: #999;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.slideShow-left:hover,
+.slideShow-right:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slideShow-left,
+.slideShow-right {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slideShow-left {
+    /* display: none; */
+    left: 10%;
+}
+
+.slideShow-right {
+    right: 10%;
+    /* display: none; */
+}

@@ -1,0 +1,98 @@
+﻿.newProduct {
+    background-color: #f2f2f2;
+    padding-bottom: 210px;
+}
+
+.newProduct-header {
+    height: 148px;
+    line-height: 148px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.newProduct-list {
+    margin: 1.8rem 0;
+}
+
+.newProduct-item {
+    background-color: #fff;
+    list-style-type: none;
+    padding: 10px;
+    margin-bottom:2rem;
+}
+
+    .newProduct-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.5);
+    }
+
+.newProduct-item-link {
+    display: block;
+    height: 200px;
+}
+
+.newProduct-item-img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.newProduct-item-description {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    height: 40px;
+    margin-top: 12px;
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.newProduct-item-discounted {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 12px;
+    display: block;
+    overflow: hidden;
+}
+
+.newProduct-item-dealOff {
+    height: 18px;
+    margin: 4px 0;
+    font-size: 0;
+    color: #999;
+}
+
+.newProduct-item-origin {
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: line-through;
+    display: inline-block;
+}
+
+.newProduct-item-percentage {
+    font-size: 12px;
+    padding: 0 4px;
+    display: inline-block;
+}
+
+.newProduct-item-rating {
+    display: inline-block;
+}
+
+    .newProduct-item-rating i,
+    .raiting-quantity {
+        font-size: 1.8rem;
+    }
+
+.newProduct-item-shipping {
+    float: right;
+    font-size: 1.4rem;
+}
